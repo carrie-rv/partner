@@ -7,3 +7,6 @@ __pycache__/
 
 # 크롬 로그 등 자동 생성 파일
 chromedriver.log
+
+# macOS
+.DS_Store
