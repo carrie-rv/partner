@@ -9,7 +9,7 @@ import time
 import requests
 import traceback
 
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
+SLACK_WEBHOOK_URL = ""
 
 def send_slack_message(message):
     payload = {"text": message}

@@ -9,7 +9,7 @@ import time
 import requests
 import traceback
 
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
+SLACK_WEBHOOK_URL = ""
 
 def send_slack_message(message):
     payload = {"text": message}
@@ -74,8 +74,8 @@ try:
     ).click()
 
     # 작품명 입력
-    wait.until(EC.presence_of_element_located((By.NAME, "seriesTitle"))).send_keys("kakaowebtoon_load_25070402_slack")
-    wait.until(EC.presence_of_element_located((By.NAME, "seriesTitleKor"))).send_keys("kakaowebtoon_load_25070402_slack")
+    wait.until(EC.presence_of_element_located((By.NAME, "seriesTitle"))).send_keys("kakaowebtoon_load_25070402_slackwebhook")
+    wait.until(EC.presence_of_element_located((By.NAME, "seriesTitleKor"))).send_keys("kakaowebtoon_load_25070402_slackwebhook")
 
     # 카테고리 선택
     wait.until(
