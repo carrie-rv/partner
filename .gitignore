@@ -1,0 +1,9 @@
+# 파이썬 캐시
+__pycache__/
+*.pyc
+
+# 환경변수 파일 (슬랙 웹훅 등)
+.env
+
+# 크롬 로그 등 자동 생성 파일
+chromedriver.log
