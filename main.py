@@ -35,7 +35,7 @@ try:
 
     # 로그인 정보
     username = "carrie.rv"
-    password = "#kkhtkak00724"
+    password = "#"
 
     # 페이지 로딩 또는 특정 요소 등장까지 대기
     wait.until(EC.visibility_of_element_located((By.NAME, "id")))
