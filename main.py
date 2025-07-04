@@ -9,7 +9,7 @@ import time
 import requests
 import traceback
 
-SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
+SLACK_WEBHOOK_URL = "https://hooks.slack.com/services/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"
 
 def send_slack_message(message):
     payload = {"text": message}
@@ -74,8 +74,8 @@ try:
     ).click()
 
     # 작품명 입력
-    wait.until(EC.presence_of_element_located((By.NAME, "seriesTitle"))).send_keys("kakaowebtoon_load_250625_slack")
-    wait.until(EC.presence_of_element_located((By.NAME, "seriesTitleKor"))).send_keys("kakaowebtoon_load_250625_slack")
+    wait.until(EC.presence_of_element_located((By.NAME, "seriesTitle"))).send_keys("kakaowebtoon_load_250704_slack")
+    wait.until(EC.presence_of_element_located((By.NAME, "seriesTitleKor"))).send_keys("kakaowebtoon_load_250704_slack")
 
     # 카테고리 선택
     wait.until(
@@ -179,11 +179,13 @@ try:
     checkbox.click()
 
     #시리즈 가져오기
-    wait.until(
-        EC.element_to_be_clickable(
-            (By.ID, "btnMoveSeriesToChanging")
+    checkbox = wait.until(
+    EC.element_to_be_clickable(
+        (By.CSS_SELECTOR, "input.htCheckboxRendererInput[data-row='0']")
         )
-    ).click()
+    )
+    checkbox.click()
+
 
     #회차 심사신청 화면 이동
     wait.until(
